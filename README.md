@@ -49,3 +49,8 @@ O teste tem um escopo bem definido mas existe espaço para interpretação. Em c
  - Práticas de mercado na construção do código;
  - Aderência aos padrões de API REST;
  - Código limpo;
+
+# Entrega
+
+O candidato deverá desenvolver o teste em um repositório privado no GitHub e dar acessso ao usuário @convergencia para que possamos avaliar o código.
+Pedimos que o candidato não faça o fork do repositório para não tornar a sua solução pública.
