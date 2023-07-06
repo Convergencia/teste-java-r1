@@ -1,4 +1,4 @@
-# teste-java-r1
+# teste-java-r2
 Teste de nivel para desenvolvedores Convergência
 
 # Objetivo
@@ -11,7 +11,7 @@ O candidato deverá desenvolver duas aplicações Java, uma para gerir CPFs (ati
 As aplicações deverão ser desenvolvidas utilizando o framework Spring Boot e banco de dados H2.
 
 Por favor utilize o template abaixo para desenvolver as aplicações:
-https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.3&packaging=jar&jvmVersion=18&groupId=br.com.convergencia&artifactId=teste-java-r1&name=teste-java-r1&description=Teste%20de%20nivel%20para%20desenvolvedores%20Convergencia&packageName=br.com.convergencia.teste-java-r1&dependencies=web,data-jpa,h2
+https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.3&packaging=jar&jvmVersion=18&groupId=br.com.convergencia&artifactId=teste-java-r2&name=teste-java-r2&description=Teste%20de%20nivel%20para%20desenvolvedores%20Convergencia&packageName=br.com.convergencia.teste-java-r2&dependencies=web,data-jpa,h2
 
 # Requisitos
 
@@ -19,12 +19,18 @@ https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.3
 
 - Deverá ser possível cadastrar um CPF;
 - Deverá ser possível consultar o status de um CPF;
+- Um CPF inativo não poderá ser reativado;
+- Após 7 dias sem login, o CPF deverá ser marcado como inativo;
+- Um CPF inativo não poderá ser utilizado para realizar login;
 
 ## Login
 
 - Deverá ser possível cadastrar um login;
 - Deverá ser possível realizar o login;
 - O login deverá ser realizado utilizando o CPF cadastrado e ativo;
+- Em caso de 3 tentativas de login com CPF inativo, o login deverá ser bloqueado por 24 horas;
+- Em caso de 3 tentativas de login com CPF ativo, o login deverá ser bloqueado por 1 hora;
+- Após o prazo de bloqueio, um e-mail deverá ser enviado para o usuário informando que o login foi desbloqueado;
 
 # Arquitetura
 
@@ -53,4 +59,5 @@ O teste tem um escopo bem definido mas existe espaço para interpretação. Em c
 # Entrega
 
 O candidato deverá desenvolver o teste em um repositório privado no GitHub e dar acessso ao usuário @convergencia para que possamos avaliar o código.
+Crie um arquivo `Business.md` na raiz do repositório com as decisões de negócio tomadas durante o desenvolvimento do teste.
 Pedimos que o candidato não faça o fork do repositório para não tornar a sua solução pública.
